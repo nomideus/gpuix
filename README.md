@@ -296,7 +296,8 @@ gh release upload v0.1.0 \
 `downloadAndInstall()` replaces the packaged files. It does **not** relaunch.
 Quit after it returns, or the next start uses the new app.
 
-HTTPS is in the native crate. This works on **Bun** and **hermes-node**. It
+HTTPS is in the native crate. This works on **Bun** and **hermes-node**.
+Native HTTPS validation rejects the compromised eMudhra intermediate keys. It
 does not exist in the browser wasm build. The repo must be **public**, or
 GitHub will 404 the API. Optional: put a Cloudflare cache in front of
 `api.github.com`. Same GitHub JSON. Not a custom schema.
